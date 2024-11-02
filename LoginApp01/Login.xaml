@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginApp01.Login"
+             Title="Login"
+             BackgroundColor="Azure">
+    
+    <VerticalStackLayout Padding="30">
+
+        <Label Text="Bem-Vindo" TextColor="Black" VerticalOptions="Start" FontSize="30" />
+        <Label Text="Faça Login para Continuar" TextColor="Black" FontSize="Subtitle"/>
+
+        <Frame BorderColor="DarkGray" HeightRequest="75" WidthRequest="75" CornerRadius="40" Padding="0" Margin="0,40,0,30">
+            <Image Source="avatar.png" Aspect="AspectFill" Margin="0"/>
+        </Frame>
+
+
+        <Frame BorderColor="Black" HeightRequest="50" WidthRequest="300" CornerRadius="12" BackgroundColor="Transparent" Padding="0" Margin="0,0,0,15">
+                <Entry x:Name="txt_usuario" Placeholder="Nome" TextColor="Black" AutomationId="UsuarioEntry"/>
+            </Frame>
+
+        <Frame BorderColor="Black" HeightRequest="50" WidthRequest="300" CornerRadius="12" BackgroundColor="Transparent" Padding="0" Margin="0,0,0,10">
+            <Entry x:Name="txt_senha" IsPassword="True" Placeholder="Senha" TextColor="Black" AutomationId="SenhaEntry"/>
+           </Frame>
+
+        <Button Text="Entrar" BackgroundColor="Blue" TextColor="White" Clicked="Button_Clicked" WidthRequest="200" CornerRadius="30" Margin="0,15,0,0" AutomationId="EntrarButton"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+            <Label Text="Novo Usuário?" TextColor="DarkGray" FontSize="13"/>
+            <Label Text="Criar Login" TextColor="Red" FontSize="13" Margin="4,0,0,0"/>
+        </StackLayout>
+        
+        <Label Text="Sobre" TextColor="DarkGray" FontSize="15" HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>
